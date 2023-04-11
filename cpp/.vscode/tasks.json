@@ -1,0 +1,49 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "cppbuild",
+      "label": "TL:mac: C/C++: clang++",
+      "command": "/usr/bin/clang++",
+      "args": [
+        "-std=c++17",
+        "-stdlib=libc++",
+        "-g",
+        "${file}",
+        "-o",
+        "${workspaceFolder}/build/${fileBasenameNoExtension}"
+      ],
+      "options": {
+        "cwd": "${fileDirname}"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "group": "build",
+      "detail": "compiler: /usr/bin/clang++"
+    },
+    {
+      "type": "cppbuild",
+      "label": "TK:windows: C/C++: cl.exe (boot from visual studo cmd)",
+      "command": "cl.exe",
+      "args": [
+        "/std:c++17",
+        "/Od",
+        "/source-charset:utf-8",
+        "/Zi",
+        "/EHsc",
+        "/nologo",
+        "/Fe${workspaceFolder}\\build\\${fileBasenameNoExtension}.exe",
+        "${file}"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}\\build\\"
+      },
+      "problemMatcher": [
+        "$msCompile"
+      ],
+      "group": "build",
+      "detail": "compiler: cl.exe"
+    }
+  ]
+}
