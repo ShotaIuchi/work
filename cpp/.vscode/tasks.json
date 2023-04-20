@@ -24,6 +24,26 @@
     },
     {
       "type": "cppbuild",
+      "label": "TL:ubuntu: C/C++: clang++",
+      "command": "clang++",
+      "args": [
+        "-std=c++17",
+        "-g",
+        "${file}",
+        "-o",
+        "${workspaceFolder}/build/${fileBasenameNoExtension}"
+      ],
+      "options": {
+        "cwd": "${fileDirname}"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "group": "build",
+      "detail": "compiler: /usr/bin/clang++"
+    },
+    {
+      "type": "cppbuild",
       "label": "TK:windows: C/C++: cl.exe (boot from visual studo cmd)",
       "command": "cl.exe",
       "args": [
